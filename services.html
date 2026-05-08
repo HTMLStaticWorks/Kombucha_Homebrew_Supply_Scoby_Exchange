@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Supplies & Services | Kombucha Homebrew Supply</title>
+    <meta name="description" content="Explore our premium brewing supplies, scoby exchange, and fermentation guidance services.">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="w-full px-6 md:px-16 lg:px-24 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors">About</a>
+                <a href="services.html" class="text-matcha transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block hover:text-matcha font-medium transition-colors">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="text-matcha font-medium">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha font-medium transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha font-medium transition-colors">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        
+        <!-- Section 1: Brewing Supply Services Grid -->
+        <section class="py-20 bg-organic-gradient">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                    <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">Premium Brewing Supplies.</h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Everything you need to craft the perfect brew, sourced organically and designed elegantly.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service/Product Category 1 -->
+                    <a href="service-details.html" class="relative flex flex-col group p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover-zoom fade-up overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/kombucha,jar/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-white">
+                            <h3 class="text-xl font-bold mb-3 text-white">Starter Kits</h3>
+                            <p class="text-sm text-gray-300 mb-6">Complete all-in-one kits for beginners including vessels, cultures, and instructions.</p>
+                            <span class="mt-auto text-matcha font-bold text-sm uppercase tracking-wide flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Service/Product Category 2 -->
+                    <a href="service-details.html" class="relative flex flex-col group p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover-zoom fade-up overflow-hidden" style="transition-delay: 0.1s;">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/tea,leaves/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-white">
+                            <h3 class="text-xl font-bold mb-3 text-white">Tea & Substrates</h3>
+                            <p class="text-sm text-gray-300 mb-6">Organic, fair-trade loose leaf teas and cane sugars perfectly balanced for SCOBY health.</p>
+                            <span class="mt-auto text-amber font-bold text-sm uppercase tracking-wide flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Service/Product Category 3 -->
+                    <a href="service-details.html" class="relative flex flex-col group p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover-zoom fade-up overflow-hidden" style="transition-delay: 0.2s;">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/glass,bottles/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-white">
+                            <h3 class="text-xl font-bold mb-3 text-white">Bottles & Vessels</h3>
+                            <p class="text-sm text-gray-300 mb-6">Pressure-rated swing top bottles and lead-free continuous brewing glass jars.</p>
+                            <span class="mt-auto text-blue-500 font-bold text-sm uppercase tracking-wide flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Service/Product Category 4 -->
+                    <a href="service-details.html" class="relative flex flex-col group p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover-zoom fade-up overflow-hidden" style="transition-delay: 0.3s;">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/thermometer,lab/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-white">
+                            <h3 class="text-xl font-bold mb-3 text-white">Lab & Temp Control</h3>
+                            <p class="text-sm text-gray-300 mb-6">Heating mats, precision pH meters, and thermometers for consistent results.</p>
+                            <span class="mt-auto text-earth font-bold text-sm uppercase tracking-wide flex items-center gap-2">Explore <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Scoby Exchange Services -->
+        <section class="py-24 bg-charcoal text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-matcha/10 blur-[100px] -z-10"></div>
+            
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="fade-up">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-matcha/30 bg-matcha/10 text-matcha mb-6 text-sm font-bold tracking-wide">
+                            <i class="fas fa-globe"></i> COMMUNITY MARKET
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">The Global Scoby Exchange.</h2>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Stop throwing away your extra cultures. Our localized exchange platform connects you with nearby brewers to trade, sell, or gift healthy SCOBYs and starter liquid.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Localized Matching</h4>
+                                    <p class="text-gray-400 text-sm">Find brewers within a 50-mile radius for easy local pickups and trades.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-xl"><i class="fas fa-shield-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Verified Cultures</h4>
+                                    <p class="text-gray-400 text-sm">Community rating system ensures you're trading for healthy, active pellicles.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <a href="pricing.html" class="px-8 py-4 bg-matcha text-white rounded-full font-bold hover:bg-[#88a846] transition-colors inline-block">Access the Exchange</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative fade-up" style="transition-delay: 0.2s;">
+                        <!-- UI Mockup -->
+                        <div class="glass border border-white/20 rounded-[2rem] p-6 shadow-2xl relative z-10 bg-white/5">
+                            <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+                                <h3 class="font-bold">Nearby Listings</h3>
+                                <i class="fas fa-sliders-h text-gray-400"></i>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-black/20 p-4 rounded-xl flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-amber text-white flex items-center justify-center font-bold">J</div>
+                                        <div>
+                                            <p class="font-bold text-sm">Jun Culture (Honey)</p>
+                                            <p class="text-xs text-gray-400">2 miles away • Free</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-3 py-1 bg-white text-charcoal rounded text-xs font-bold">Claim</button>
+                                </div>
+                                <div class="bg-black/20 p-4 rounded-xl flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-matcha text-white flex items-center justify-center font-bold">K</div>
+                                        <div>
+                                            <p class="font-bold text-sm">Classic Black Tea Pellicle</p>
+                                            <p class="text-xs text-gray-400">5 miles away • Trade</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-3 py-1 bg-white text-charcoal rounded text-xs font-bold">Message</button>
+                                </div>
+                                <div class="bg-black/20 p-4 rounded-xl flex items-center justify-between opacity-50">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">W</div>
+                                        <div>
+                                            <p class="font-bold text-sm">Water Kefir Grains</p>
+                                            <p class="text-xs text-gray-400">12 miles away • $10</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-3 py-1 bg-white text-charcoal rounded text-xs font-bold">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating element -->
+                        <div class="absolute -bottom-8 -left-8 bg-matcha text-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+                            <p class="font-bold">10,000+</p>
+                            <p class="text-xs">Active Trades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Fermentation Guidance & Support -->
+        <section class="py-24 bg-white dark:bg-[#2a2a2a]">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                    <h2 class="text-4xl font-heading font-bold mb-4">Expert Guidance & Support.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Brewing living cultures can be unpredictable. We're here to help you troubleshoot every step of the way.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="relative p-8 rounded-3xl overflow-hidden fade-up group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/recording,camera/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-center">
+                            <h3 class="text-xl font-bold mb-3 text-white mt-4">Video Masterclasses</h3>
+                            <p class="text-gray-300 text-sm mb-6 flex-1">Step-by-step visual guides on everything from first fermentation to advanced flavoring techniques.</p>
+                            <a href="blog.html" class="text-matcha font-bold hover:underline">Watch Tutorials</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-8 rounded-3xl overflow-hidden fade-up group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" style="transition-delay: 0.1s;">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/microscope/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-center">
+                            <h3 class="text-xl font-bold mb-3 text-white mt-4">Culture Diagnostics</h3>
+                            <p class="text-gray-300 text-sm mb-6 flex-1">Not sure if it's Kahm yeast or mold? Send us a photo and our experts will diagnose your brew within 24 hours.</p>
+                            <a href="contact.html" class="text-amber font-bold hover:underline">Submit a Photo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-8 rounded-3xl overflow-hidden fade-up group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" style="transition-delay: 0.2s;">
+                        <div class="absolute inset-0 bg-[url('https://loremflickr.com/800/600/community,discussion/all')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 bg-charcoal/85 group-hover:bg-charcoal/75 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col h-full text-center">
+                            <h3 class="text-xl font-bold mb-3 text-white mt-4">24/7 Community Forum</h3>
+                            <p class="text-gray-300 text-sm mb-6 flex-1">Connect with thousands of brewers sharing recipes, tips, and answering late-night fermentation panic questions.</p>
+                            <a href="blog.html" class="text-blue-500 font-bold hover:underline">Join Discussion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Subscription & Delivery Options -->
+        <section class="py-24 bg-organic-gradient">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="bg-white dark:bg-[#222] rounded-[3rem] p-8 md:p-16 shadow-2xl border border-gray-100 dark:border-gray-800">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="fade-up">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-400 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Save 15%</span>
+                            <h2 class="text-4xl font-heading font-bold mb-4">Never run out of tea or sugar.</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                                Subscribe to our monthly Substrate Box. Get exactly enough organic tea and cane sugar delivered right when you need it based on your brewing volume. 
+                            </p>
+                            
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-matcha text-xl"></i>
+                                    <span class="font-medium text-gray-700 dark:text-gray-300">Pause or cancel anytime</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-matcha text-xl"></i>
+                                    <span class="font-medium text-gray-700 dark:text-gray-300">Free shipping on all subscription boxes</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-matcha text-xl"></i>
+                                    <span class="font-medium text-gray-700 dark:text-gray-300">Exclusive seasonal flavor add-ons</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="pricing.html" class="px-8 py-4 rounded-full bg-charcoal text-white dark:bg-white dark:text-charcoal font-bold hover:scale-105 transition-transform inline-block">View Subscription Plans</a>
+                        </div>
+                        
+                        <div class="relative fade-up" style="transition-delay: 0.2s;">
+                            <div class="absolute inset-0 bg-matcha/20 rounded-full blur-3xl transform -translate-x-10 translate-y-10"></div>
+                            <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=600&q=80" alt="Subscription Box" class="relative z-10 rounded-2xl shadow-xl border-4 border-white dark:border-gray-700 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Starter Kits</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Bottles & Jars</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Tea & Sugar Bundles</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Heating Mats</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="pricing.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Brewing Forum</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Recipe Blog</a></li>
+                        <li><a href="about.html" class="hover:text-matcha transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-matcha transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Refunds & Returns</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Kombucha Homebrew Supply. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>

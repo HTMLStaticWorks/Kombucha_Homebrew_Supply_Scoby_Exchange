@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Brewing | Kombucha Homebrew Supply</title>
+    <meta name="description" content="Elevate your fermentation with specialized equipment, premium tea bundles, and scientific brewing timelines.">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
+
+    <!-- Header / Navigation -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="w-full px-6 md:px-16 lg:px-24 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">
+                    K
+                </div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">
+                    RTL
+                </button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block text-matcha font-medium">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha font-medium transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha font-medium transition-colors">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Specialized Kombucha Brewing Hero -->
+        <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-charcoal text-white">
+            <div class="absolute inset-0 bg-[url('assets/images/blog-featured.png')] bg-cover bg-center opacity-40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
+            
+            <div class="w-full px-6 md:px-16 lg:px-24 relative z-10 flex flex-col items-center text-center">
+                <div class="fade-up max-w-4xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur mb-8">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span class="text-sm font-mono tracking-widest text-gray-300">FERMENTATION LAB</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 tracking-tight">
+                        Elevate the <span class="italic font-light text-amber-400">Science</span><br>of Fermentation.
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-10 font-light leading-relaxed max-w-2xl mx-auto">
+                        For the serious brewer. Explore lab-grade equipment, rare single-origin teas, and scientific methodologies to perfect your craft.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#equipment" class="px-8 py-4 rounded-full bg-white text-charcoal font-semibold hover:bg-gray-200 transition-all">Explore Equipment</a>
+                        <a href="#timeline" class="px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition-all font-semibold backdrop-blur flex items-center justify-center gap-2">
+                            <i class="fas fa-microscope"></i> View Protocols
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tea & Sugar Bundle Collections -->
+        <section class="py-24 bg-white dark:bg-[#2a2a2a]">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-up">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl font-heading font-bold mb-4">The Substrate.</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg">Your SCOBY is only as good as what you feed it. Discover our single-origin tea and organic sugar bundles designed for optimal microbial health.</p>
+                    </div>
+                    <a href="services.html" class="mt-6 md:mt-0 px-6 py-2 border-b-2 border-charcoal dark:border-white font-bold hover:text-matcha hover:border-matcha transition-colors uppercase tracking-wider text-sm">Shop All Bundles</a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bundle 1 -->
+                    <div class="group fade-up cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]">
+                            <img src="assets/images/basic-kit.png" alt="Black Tea Substrate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                            <div class="absolute top-4 left-4 bg-white dark:bg-charcoal px-3 py-1 text-xs font-bold rounded shadow uppercase tracking-wide">Classic Profile</div>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold mb-1 group-hover:text-matcha transition-colors">Yunnan Black & Cane Bundle</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Produces a robust, traditional kombucha with deep apple and oak notes.</p>
+                        <p class="font-bold text-lg">$24.00 <span class="text-sm text-gray-400 font-normal line-through ml-2">$30.00</span></p>
+                    </div>
+
+                    <!-- Bundle 2 -->
+                    <div class="group fade-up cursor-pointer" style="transition-delay: 0.1s;">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]">
+                            <img src="assets/images/flavor-kit.png" alt="Green Tea Substrate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-matcha text-white px-3 py-1 text-xs font-bold rounded shadow uppercase tracking-wide">Delicate Profile</div>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold mb-1 group-hover:text-matcha transition-colors">Sencha Green & Agave Bundle</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Ideal for lighter brews. Floral, crisp, and high in antioxidants.</p>
+                        <p class="font-bold text-lg">$28.00</p>
+                    </div>
+
+                    <!-- Bundle 3 -->
+                    <div class="group fade-up cursor-pointer md:hidden lg:block" style="transition-delay: 0.2s;">
+                        <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]">
+                            <img src="assets/images/pro-kit.png" alt="Hibiscus Tea Substrate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 bg-amber text-white px-3 py-1 text-xs font-bold rounded shadow uppercase tracking-wide">Tart Profile</div>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold mb-1 group-hover:text-matcha transition-colors">Hibiscus Oolong Blend</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">A hybrid blend for advanced brewers yielding a beautiful ruby tint.</p>
+                        <p class="font-bold text-lg">$32.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Fermentation Equipment Showcase -->
+        <section id="equipment" class="py-24 bg-offwhite dark:bg-[#222]">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-4xl font-heading font-bold mb-4">Professional Grade Equipment.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Upgrade from mason jars to temperature-controlled continuous brewing systems.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 relative fade-up">
+                        <div class="absolute inset-0 bg-matcha/5 rounded-[3rem] transform -rotate-3 scale-105"></div>
+                        <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=800&q=80" alt="Brewing Equipment" class="relative z-10 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800">
+                        
+                        <!-- Hotspots -->
+                        <div class="absolute top-1/4 left-1/4 z-20 group">
+                            <div class="w-4 h-4 bg-amber-400 rounded-full animate-ping absolute"></div>
+                            <div class="w-4 h-4 bg-amber-500 rounded-full relative cursor-pointer shadow-lg border-2 border-white"></div>
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-white dark:bg-charcoal p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none text-sm text-center border border-gray-100 dark:border-gray-700">
+                                <p class="font-bold mb-1">Airlock System</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Prevents contamination during primary fermentation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-1/3 right-1/4 z-20 group">
+                            <div class="w-4 h-4 bg-matcha rounded-full animate-ping absolute"></div>
+                            <div class="w-4 h-4 bg-matcha rounded-full relative cursor-pointer shadow-lg border-2 border-white"></div>
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-white dark:bg-charcoal p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none text-sm text-center border border-gray-100 dark:border-gray-700">
+                                <p class="font-bold mb-1">Stainless Spigot</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">304 Stainless steel, lead-free, perfect for continuous brewing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2 space-y-8 fade-up">
+                        <div class="bg-white dark:bg-charcoal p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
+                                <i class="fas fa-thermometer-half text-amber-500 text-2xl"></i> Temperature Control
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">Maintain an exact 78°F (25°C) environment year-round with our wrap-around heating belts and digital thermostats.</p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-charcoal p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
+                                <i class="fas fa-vial text-blue-500 text-2xl"></i> pH Testing Kits
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">Don't guess when it's done. Our precision pH strips and digital meters ensure your brew hits that perfect 2.5 - 3.5 range.</p>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-charcoal p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold mb-2 flex items-center gap-3">
+                                <i class="fas fa-wine-bottle text-matcha text-2xl"></i> Pressure Rated Glass
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400">Avoid explosions during second fermentation. Our flip-top bottles are pressure-rated up to 4 bars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Brewing Process Timeline -->
+        <section id="timeline" class="py-24 bg-charcoal text-white relative">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-4xl font-heading font-bold mb-4">The Fermentation Timeline.</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Understanding the microbial phases of kombucha brewing.</p>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/20 transform md:-translate-x-1/2"></div>
+
+                    <!-- Phase 1 -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center mb-12 fade-up">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-matcha border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-matcha font-mono text-sm tracking-wider uppercase">Days 1-3</span>
+                            <h3 class="text-2xl font-bold mb-2">Yeast Activation</h3>
+                            <p class="text-gray-400 text-sm">Yeasts begin consuming sucrose, breaking it down into fructose and glucose, producing ethanol and CO2.</p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 pl-12">
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">pH drops from 4.5 to 3.8</div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center mb-12 fade-up">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-400 border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">Pellicle formation visible</div>
+                        </div>
+                        <div class="pl-12 md:pl-12 md:w-1/2">
+                            <span class="text-amber-400 font-mono text-sm tracking-wider uppercase">Days 4-7</span>
+                            <h3 class="text-2xl font-bold mb-2">Bacterial Acidification</h3>
+                            <p class="text-gray-400 text-sm">Acetobacter converts ethanol into acetic acid. The distinct tart flavor profile develops and a new pellicle forms on the surface.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center fade-up">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-400 border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-blue-400 font-mono text-sm tracking-wider uppercase">Days 8-14</span>
+                            <h3 class="text-2xl font-bold mb-2">Second Fermentation (F2)</h3>
+                            <p class="text-gray-400 text-sm">Bottled with fruit or sugar. Anaerobic environment forces CO2 into the liquid, creating natural carbonation.</p>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 pl-12">
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">Target pH: 2.5 - 3.2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Community Forum Preview -->
+        <section class="py-24 bg-organic-gradient">
+            <div class="w-full px-6 md:px-16 lg:px-24">
+                <div class="bg-white/80 dark:bg-charcoal/90 backdrop-blur-xl rounded-[2rem] p-8 md:p-12 shadow-2xl border border-white/50 dark:border-gray-700">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-10 fade-up">
+                        <div>
+                            <h2 class="text-3xl font-heading font-bold mb-2">Pro Brewers Forum</h2>
+                            <p class="text-gray-600 dark:text-gray-400">Join 10,000+ advanced brewers discussing technique.</p>
+                        </div>
+                        <a href="blog.html" class="mt-4 md:mt-0 px-6 py-2 rounded-full bg-charcoal text-white dark:bg-white dark:text-charcoal font-semibold hover:opacity-90 transition-opacity">Enter Forum</a>
+                    </div>
+
+                    <div class="space-y-4 fade-up">
+                        <!-- Thread Item -->
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700 cursor-pointer">
+                            <div class="flex items-center gap-4 mb-3 md:mb-0">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm md:text-base">Force Carbonation in Kegs vs Natural F2</h4>
+                                    <p class="text-xs text-gray-500">Posted by @BrewMasterDan • 2 hours ago in Equipment</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 text-sm text-gray-500">
+                                <span><i class="fas fa-comment-alt mr-1"></i> 42</span>
+                                <span><i class="fas fa-eye mr-1"></i> 1.2k</span>
+                            </div>
+                        </div>
+
+                        <!-- Thread Item -->
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700 cursor-pointer">
+                            <div class="flex items-center gap-4 mb-3 md:mb-0">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                                    <i class="fas fa-bug"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm md:text-base">Troubleshooting: Kahm Yeast vs Mold (Photos)</h4>
+                                    <p class="text-xs text-gray-500">Posted by @FermentGeek • 5 hours ago in Diagnostics</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 text-sm text-gray-500">
+                                <span><i class="fas fa-comment-alt mr-1"></i> 18</span>
+                                <span><i class="fas fa-eye mr-1"></i> 890</span>
+                            </div>
+                        </div>
+
+                        <!-- Thread Item -->
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700 cursor-pointer">
+                            <div class="flex items-center gap-4 mb-3 md:mb-0">
+                                <div class="w-10 h-10 rounded-full bg-matcha/20 text-matcha flex items-center justify-center font-bold">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm md:text-base">Using Yerba Mate for Primary Fermentation</h4>
+                                    <p class="text-xs text-gray-500">Posted by @SarahBrew • 1 day ago in Recipes</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 text-sm text-gray-500">
+                                <span><i class="fas fa-comment-alt mr-1"></i> 64</span>
+                                <span><i class="fas fa-eye mr-1"></i> 3.4k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: FAQ + Final CTA Section -->
+        <section class="py-24 bg-white dark:bg-[#2a2a2a]">
+            <div class="w-full px-6 md:px-16 lg:px-24 grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- FAQ -->
+                <div class="fade-up">
+                    <h2 class="text-3xl font-heading font-bold mb-8">Advanced FAQ</h2>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                            <button class="faq-item-btn w-full flex justify-between items-center text-left font-bold text-lg focus:outline-none">
+                                What is the ideal pH for bottling?
+                                <i class="fas fa-plus text-matcha text-sm"></i>
+                            </button>
+                            <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm hidden">For safety and optimal shelf stability, you should bottle when the pH is between 2.5 and 3.2. Anything above 4.0 carries a risk of botulism in an anaerobic environment.</p>
+                        </div>
+                        <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                            <button class="faq-item-btn w-full flex justify-between items-center text-left font-bold text-lg focus:outline-none">
+                                How often should I clean my continuous brew spigot?
+                                <i class="fas fa-plus text-matcha text-sm"></i>
+                            </button>
+                            <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm hidden">We recommend disassembling and thoroughly cleaning the stainless steel spigot every 2-3 months to prevent yeast blockages and ensure sanitary dispensing.</p>
+                        </div>
+                        <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                            <button class="faq-item-btn w-full flex justify-between items-center text-left font-bold text-lg focus:outline-none">
+                                Can I use tap water?
+                                <i class="fas fa-plus text-matcha text-sm"></i>
+                            </button>
+                            <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm hidden">No. Chlorine and chloramines in municipal tap water will harm or kill your SCOBY. Always use filtered, spring, or distilled water.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-charcoal text-white rounded-[2rem] p-10 text-center relative overflow-hidden fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-matcha rounded-full blur-3xl opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-amber-500 rounded-full blur-3xl opacity-20"></div>
+                    
+                    <div class="relative z-10">
+                        <i class="fas fa-flask text-4xl text-matcha mb-4"></i>
+                        <h3 class="text-3xl font-heading font-bold mb-4">Ready to upgrade?</h3>
+                        <p class="text-gray-300 mb-8">Get 15% off all professional grade equipment and bundles when you sign up for our Pro newsletter.</p>
+                        <form class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" placeholder="Enter email" class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-matcha text-white" required>
+                            <button type="submit" class="px-6 py-3 bg-matcha text-white font-bold rounded-lg hover:bg-[#88a846] transition-colors whitespace-nowrap">Claim Offer</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Starter Kits</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Pro Equipment</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Tea Bundles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="pricing.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Pro Forum</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-matcha transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Kombucha Homebrew Supply. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Robust FAQ toggle
+        document.querySelectorAll('.faq-item-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current item
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+                
+                // Optional: Close other items (Accordion behavior)
+                document.querySelectorAll('.faq-item-btn').forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        const otherContent = otherBtn.nextElementSibling;
+                        const otherIcon = otherBtn.querySelector('i');
+                        otherContent.classList.add('hidden');
+                        otherIcon.classList.remove('fa-minus');
+                        otherIcon.classList.add('fa-plus');
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <!-- Empty State -->
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginger Turmeric Immune Booster F2 Recipe | Kombucha Homebrew Supply</title>
+    <meta name="description" content="The perfect earthy and spicy blend for your second fermentation.">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 w-full px-6 md:px-16 lg:px-24">
+        <div class="w-full flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors text-matcha">Blog</a>
+                <a href="contact.html" class="hover:text-matcha transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block hover:text-matcha font-medium transition-colors">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
+                <a href="blog.html" class="text-matcha font-medium">Blog</a>
+                <a href="contact.html" class="hover:text-matcha font-medium transition-colors">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24">
+        
+        <!-- Section 1: Featured Article Header -->
+        <section class="w-full px-6 md:px-16 lg:px-24 mt-8 fade-up">
+            <div class="max-w-4xl mx-auto text-center mb-10">
+                <a href="#" class="inline-block px-4 py-1 rounded-full bg-matcha/10 text-matcha font-bold text-xs uppercase tracking-widest mb-6">Recipe</a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">Ginger Turmeric Immune Booster F2 Recipe</h1>
+                
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/team-sarah.png" class="w-10 h-10 rounded-full object-cover">
+                        <span class="font-bold text-charcoal dark:text-white">Sarah Jenkins</span>
+                    </div>
+                    <span>•</span>
+                    <span><i class="far fa-calendar-alt mr-2"></i> Oct 12, 2025</span>
+                    <span>•</span>
+                    <span><i class="far fa-clock mr-2"></i> 5 Min Read</span>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl mb-16 aspect-video">
+                <img src="assets/images/blog-action.png" alt="Kombucha pouring" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <div class="w-full px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row gap-16 max-w-none mx-auto">
+            
+            <!-- Section 2: Main Blog Content Area -->
+            <div class="lg:w-2/3 fade-up" style="transition-delay: 0.1s;">
+                <article class="prose prose-lg dark:prose-invert prose-matcha max-w-none prose-headings:font-heading prose-a:text-matcha hover:prose-a:text-[#88a846]">
+                    <p class="text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-medium mb-8">
+                        The transition from summer to fall means it's time to adjust our fermentation profiles. While berries are great for the heat, the cooler months call for roots. This Ginger Turmeric blend is not only deeply warming and earthy, but it packs a massive anti-inflammatory punch.
+                    </p>
+
+                    <h2>Why Ginger and Turmeric?</h2>
+                    <p>
+                        Ginger is a powerhouse in the second fermentation (F2) process. It contains natural yeasts on its skin that supercharge carbonation. If you've been struggling to get a fizzy brew, adding a teaspoon of fresh grated ginger is the easiest fix.
+                    </p>
+                    <p>
+                        Turmeric adds a brilliant golden hue and earthy depth, complementing the tartness of the kombucha base. Remember to add a tiny pinch of black pepper—it contains piperine, which increases the bioavailability of turmeric's active compound, curcumin, by up to 2000%.
+                    </p>
+
+                    <div class="bg-matcha/5 border-l-4 border-matcha p-6 rounded-r-xl my-8">
+                        <h4 class="font-bold mb-2">Pro Tip:</h4>
+                        <p class="m-0 text-sm">Always use fresh roots rather than powdered spices for F2. Powders tend to clump, float to the top, and can create a gritty texture in your final drink.</p>
+                    </div>
+
+                    <h2>Ingredients (Per 16oz / 500ml Bottle)</h2>
+                    <ul>
+                        <li>14 oz plain, unflavored Kombucha (from your F1)</li>
+                        <li>1 tsp freshly grated ginger (skin on is fine if organic)</li>
+                        <li>1/2 tsp freshly grated turmeric</li>
+                        <li>1 tsp organic cane sugar or honey (for carbonation food)</li>
+                        <li>1 tiny pinch of black pepper</li>
+                        <li>1 tsp lemon juice (optional, for brightness)</li>
+                    </ul>
+
+                    <h2>Instructions</h2>
+                    <ol>
+                        <li><strong>Prep the roots:</strong> Grate the ginger and turmeric. You don't need to peel them if they are organic; just wash them thoroughly.</li>
+                        <li><strong>Bottle:</strong> Add the grated roots, sugar, black pepper, and lemon juice to your pressure-rated swing-top bottle.</li>
+                        <li><strong>Pour:</strong> Gently pour your F1 kombucha into the bottle, leaving about 1 inch of headspace at the top.</li>
+                        <li><strong>Seal and Ferment:</strong> Seal the bottle tightly and leave it at room temperature (ideally 75-80°F) for 2 to 4 days.</li>
+                        <li><strong>Chill:</strong> Once you see bubbles at the top, move the bottle to the fridge for at least 12 hours before opening. This helps the CO2 dissolve into the liquid.</li>
+                    </ol>
+
+                    <p>
+                        Strain the roots out as you pour, or leave them in for a rustic feel. Enjoy your immune-boosting brew!
+                    </p>
+                </article>
+
+                <!-- Share -->
+                <div class="flex items-center gap-4 mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+                    <span class="font-bold text-sm">Share this recipe:</span>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 3: Sidebar with Categories & Recent Posts -->
+            <div class="lg:w-1/3">
+                <div class="sticky top-32 space-y-10 fade-up" style="transition-delay: 0.2s;">
+                    
+                    <!-- Author Box -->
+                    <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 text-center shadow-sm">
+                        <img src="assets/images/team-sarah.png" class="w-24 h-24 rounded-full mx-auto object-cover mb-4">
+                        <h3 class="font-bold text-lg mb-1">Sarah Jenkins</h3>
+                        <p class="text-matcha text-sm mb-4">Founder & Brewer</p>
+                        <p class="text-sm text-gray-500 mb-6">Former biochemist sharing the science of fermentation one recipe at a time.</p>
+                        <a href="#" class="text-charcoal dark:text-white font-bold text-sm border-b-2 border-matcha pb-1 hover:text-matcha transition-colors">View all posts</a>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                        <h3 class="font-heading font-bold text-xl mb-6">Categories</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-matcha transition-colors"><span>Recipes</span> <span class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs">24</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-matcha transition-colors"><span>Guides & Tutorials</span> <span class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs">18</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-matcha transition-colors"><span>Health & Science</span> <span class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs">12</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-matcha transition-colors"><span>Community</span> <span class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs">9</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                        <h3 class="font-heading font-bold text-xl mb-6">Recent Posts</h3>
+                        <div class="space-y-6">
+                            <a href="#" class="flex gap-4 group">
+                                <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=100&q=80" class="w-16 h-16 rounded-xl object-cover">
+                                <div>
+                                    <h4 class="font-bold text-sm group-hover:text-matcha transition-colors line-clamp-2 mb-1">Achieving the Perfect Carbonation Every Time</h4>
+                                    <span class="text-xs text-gray-400">Sep 28, 2025</span>
+                                </div>
+                            </a>
+                            <a href="#" class="flex gap-4 group">
+                                <img src="https://images.unsplash.com/photo-1616174781489-08a6d4825d19?auto=format&fit=crop&w=100&q=80" class="w-16 h-16 rounded-xl object-cover">
+                                <div>
+                                    <h4 class="font-bold text-sm group-hover:text-matcha transition-colors line-clamp-2 mb-1">Is My SCOBY Healthy? A Visual Diagnostic Guide</h4>
+                                    <span class="text-xs text-gray-400">Sep 15, 2025</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Comments + Related Articles -->
+
+        <div class="w-full px-6 md:px-16 lg:px-24 mt-24 max-w-none mx-auto border-t border-gray-200 dark:border-gray-800 pt-16">
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <!-- Comments -->
+                <section class="fade-up">
+                    <h3 class="text-3xl font-heading font-bold mb-8">Comments (3)</h3>
+                    
+                    <div class="space-y-8 mb-12">
+                        <!-- Comment 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" class="w-12 h-12 rounded-full object-cover shrink-0">
+                            <div>
+                                <div class="bg-white dark:bg-[#2a2a2a] p-5 rounded-2xl rounded-tl-none border border-gray-100 dark:border-gray-800">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="font-bold">Emma W.</h4>
+                                        <span class="text-xs text-gray-400">Oct 14, 2025</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Made this last week and it is SO fizzy! I didn't add the black pepper though, will definitely try that next time for the turmeric absorption.</p>
+                                </div>
+                                <button class="text-xs font-bold text-gray-500 mt-2 ml-2 hover:text-matcha">Reply</button>
+                            </div>
+                        </div>
+
+                        <!-- Comment 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" class="w-12 h-12 rounded-full object-cover shrink-0">
+                            <div>
+                                <div class="bg-white dark:bg-[#2a2a2a] p-5 rounded-2xl rounded-tl-none border border-gray-100 dark:border-gray-800">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="font-bold">David K.</h4>
+                                        <span class="text-xs text-gray-400">Oct 13, 2025</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Can I use ginger powder if I don't have fresh root?</p>
+                                </div>
+                                <button class="text-xs font-bold text-gray-500 mt-2 ml-2 hover:text-matcha">Reply</button>
+                                
+                                <!-- Reply -->
+                                <div class="flex gap-4 mt-4">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" class="w-10 h-10 rounded-full object-cover shrink-0">
+                                    <div>
+                                        <div class="bg-matcha/10 p-5 rounded-2xl rounded-tl-none border border-matcha/20">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <h4 class="font-bold flex items-center gap-2">Sarah Jenkins <span class="bg-matcha text-white text-[10px] px-2 py-0.5 rounded uppercase">Author</span></h4>
+                                                <span class="text-xs text-gray-400">Oct 13, 2025</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Hi David! You can, but it tends to clump up and won't give you as much carbonation since it lacks the natural yeasts found on the skin of fresh ginger root.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leave Comment Form -->
+                    <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+                        <h4 class="font-bold text-xl mb-6">Leave a Reply</h4>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha">
+                                <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha">
+                            </div>
+                            <textarea rows="4" placeholder="Your comment..." class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha"></textarea>
+                            <button type="submit" class="px-8 py-3 rounded-xl bg-charcoal text-white dark:bg-white dark:text-charcoal font-bold hover:bg-matcha dark:hover:bg-matcha dark:hover:text-white transition-colors">Post Comment</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Related Articles -->
+                <section class="fade-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-3xl font-heading font-bold mb-8">Related Recipes</h3>
+                    <div class="space-y-6">
+                        
+                        <a href="#" class="block group bg-white dark:bg-[#2a2a2a] p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all flex items-center gap-6">
+                            <div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+                                <img src="https://images.unsplash.com/photo-1544144433-d50aff500b91?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <span class="text-matcha text-xs font-bold uppercase tracking-widest mb-1 block">Recipe</span>
+                                <h4 class="font-bold text-lg group-hover:text-matcha transition-colors line-clamp-2">Strawberry Basil Summer Smash</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="block group bg-white dark:bg-[#2a2a2a] p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all flex items-center gap-6">
+                            <div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+                                <img src="https://images.unsplash.com/photo-1595981267035-7b04d84d82f3?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <span class="text-matcha text-xs font-bold uppercase tracking-widest mb-1 block">Recipe</span>
+                                <h4 class="font-bold text-lg group-hover:text-matcha transition-colors line-clamp-2">Blueberry Lavender Chill</h4>
+                            </div>
+                        </a>
+
+                        <div class="bg-charcoal text-white rounded-2xl p-8 text-center mt-8 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-matcha/20 blur-2xl"></div>
+                            <div class="relative z-10">
+                                <h4 class="font-bold text-xl mb-2">Want more recipes?</h4>
+                                <p class="text-sm text-gray-300 mb-4">Download our free PDF guide with 50+ flavor combinations.</p>
+                                <button class="px-6 py-2 bg-matcha text-white font-bold rounded-full hover:bg-white hover:text-charcoal transition-colors">Download PDF</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Starter Kits</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Bottles & Jars</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Tea & Sugar Bundles</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Heating Mats</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="pricing.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Brewing Forum</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Recipe Blog</a></li>
+                        <li><a href="about.html" class="hover:text-matcha transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-matcha transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Refunds & Returns</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Kombucha Homebrew Supply. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>

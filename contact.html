@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kombucha Homebrew Supply</title>
+    <meta name="description" content="Get in touch with our fermentation experts.">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="w-full px-6 md:px-16 lg:px-24 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors">Blog</a>
+                <a href="contact.html" class="text-matcha transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block hover:text-matcha font-medium transition-colors">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha font-medium transition-colors">Blog</a>
+                <a href="contact.html" class="text-matcha font-medium">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24 relative overflow-hidden">
+        
+        <!-- Background Decorations -->
+        <div class="absolute top-0 right-0 w-1/2 h-[600px] bg-matcha/10 rounded-bl-[100px] -z-10"></div>
+        <div class="absolute top-40 left-[-10%] w-[30vw] h-[30vw] bg-amber/10 rounded-full blur-[80px] -z-10"></div>
+
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            
+            <!-- Section 1: Contact Hero Section -->
+            <section class="text-center max-w-3xl mx-auto pt-16 mb-20 fade-up">
+                <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6">Let's talk <span class="text-matcha">cultures.</span></h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Whether you need help diagnosing a SCOBY, tracking an order, or partnering with us, we're here to help.</p>
+            </section>
+
+            <div class="grid lg:grid-cols-5 gap-12 lg:gap-0 relative">
+                
+                <!-- Section 2: Contact Form (Floating UI) -->
+                <section class="lg:col-span-3 lg:pr-12 fade-up relative z-20">
+                    <div class="bg-white dark:bg-[#2a2a2a] p-8 md:p-12 rounded-[2rem] shadow-2xl border border-gray-100 dark:border-gray-800">
+                        <h2 class="text-2xl font-heading font-bold mb-8">Send us a message</h2>
+                        
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 dark:text-gray-300">First Name</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-[#222] border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="Jane">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Last Name</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-[#222] border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-[#222] border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="jane@example.com">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Topic</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-[#222] border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors appearance-none text-gray-500">
+                                    <option>Select a topic...</option>
+                                    <option>Order Support</option>
+                                    <option>Brewing/SCOBY Diagnostic help</option>
+                                    <option>Scoby Exchange Issue</option>
+                                    <option>Wholesale Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Message</label>
+                                <textarea rows="5" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-[#222] border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="How can we help?"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-charcoal text-white dark:bg-white dark:text-charcoal font-bold hover:bg-matcha dark:hover:bg-matcha dark:hover:text-white transition-colors shadow-lg">Send Message</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Section 3: Interactive Map & Contact Info -->
+                <section class="lg:col-span-2 lg:-ml-8 fade-up" style="transition-delay: 0.2s;">
+                    <div class="h-full flex flex-col justify-center space-y-8 lg:pl-12 pt-8 lg:pt-0">
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-matcha/10 text-matcha flex items-center justify-center shrink-0 text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Our HQ & Lab</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-2">1024 Fermentation Way<br>Portland, OR 97214</p>
+                                <a href="#" class="text-sm font-bold text-matcha hover:underline">Get Directions</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-amber/10 text-amber flex items-center justify-center shrink-0 text-xl"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Email Us</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-2">We aim to reply within 24 hours.</p>
+                                <a href="mailto:hello@kombuchasupply.com" class="text-sm font-bold text-matcha hover:underline">hello@kombuchasupply.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0 text-xl"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Call Us</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-2">Mon-Fri from 9am to 5pm PST.</p>
+                                <a href="tel:+18005550199" class="text-sm font-bold text-matcha hover:underline">+1 (800) 555-0199</a>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="w-full h-48 rounded-2xl bg-gray-200 dark:bg-gray-700 relative overflow-hidden mt-4 group cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Map" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                <span class="px-4 py-2 bg-white text-charcoal rounded-full font-bold text-sm shadow-lg"><i class="fas fa-map-pin text-matcha mr-2"></i>View on Map</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <!-- Section 4: FAQ + Social Links -->
+            <section class="mt-32 border-t border-gray-200 dark:border-gray-800 pt-16 fade-up">
+                <div class="grid md:grid-cols-2 gap-16">
+                    
+                    <div>
+                        <h2 class="text-3xl font-heading font-bold mb-8">Quick Answers</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Do you ship internationally?</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Currently, we only ship physical hardware and dry goods internationally. Live cultures (SCOBYs) are limited to the US and Canada due to transit times.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">My SCOBY sank to the bottom. Is it dead?</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">No! It's completely normal for a SCOBY to sink, float in the middle, or stay at the top. A new pellicle will eventually form across the surface of the liquid.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">How do I cancel my tea subscription?</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">You can pause or cancel your subscription at any time from your account dashboard. There are no cancellation fees.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-charcoal text-white rounded-3xl p-10 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-organic-gradient opacity-10"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-heading font-bold mb-4">Join our community online</h3>
+                            <p class="text-gray-400 mb-8 max-w-sm mx-auto">Follow us for daily recipes, behind-the-scenes lab tours, and features of our community's best brews.</p>
+                            
+                            <div class="flex justify-center gap-4">
+                                <a href="#" class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-2xl hover:bg-matcha hover:-translate-y-1 transition-all"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-2xl hover:bg-[#E60023] hover:-translate-y-1 transition-all"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#" class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-2xl hover:bg-[#1877F2] hover:-translate-y-1 transition-all"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-2xl hover:bg-[#FF0000] hover:-translate-y-1 transition-all"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Starter Kits</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Bottles & Jars</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Tea & Sugar Bundles</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Heating Mats</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="pricing.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Brewing Forum</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Recipe Blog</a></li>
+                        <li><a href="about.html" class="hover:text-matcha transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-matcha transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Refunds & Returns</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Kombucha Homebrew Supply. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>

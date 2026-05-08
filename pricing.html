@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans & Subscriptions | Kombucha Homebrew Supply</title>
+    <meta name="description" content="Choose your brewing journey. Subscriptions, bundles, and Scoby Exchange access.">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="w-full px-6 md:px-16 lg:px-24 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha transition-colors">Supplies</a>
+                <a href="pricing.html" class="text-matcha transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block hover:text-matcha font-medium transition-colors">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
+                <a href="pricing.html" class="text-matcha font-medium">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha font-medium transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha font-medium transition-colors">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24">
+        
+        <!-- Section 1: Pricing Hero -->
+        <section class="py-16 text-center w-full px-6 md:px-16 lg:px-24 fade-up">
+            <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6">Simple, Transparent <span class="text-amber">Pricing.</span></h1>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 text-lg">Whether you're brewing your first batch or managing a continuous lab, we have a plan designed for your fermentation goals.</p>
+            
+            <!-- Toggle Switch (Visual only) -->
+            <div class="inline-flex items-center p-1 bg-gray-200 dark:bg-gray-800 rounded-full relative">
+                <button class="w-32 py-2 rounded-full bg-white dark:bg-[#2a2a2a] shadow font-bold text-sm z-10">Monthly</button>
+                <button class="w-32 py-2 rounded-full font-bold text-sm text-gray-500 z-10">Annually <span class="text-[10px] text-matcha block -mt-1">Save 20%</span></button>
+            </div>
+        </section>
+
+        <!-- Section 2: Product Bundle Plans -->
+        <section class="py-12 w-full px-6 md:px-16 lg:px-24">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                
+                <!-- Plan 1 -->
+                <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all fade-up">
+                    <h3 class="text-xl font-heading font-bold mb-2">Exchange Member</h3>
+                    <p class="text-sm text-gray-500 mb-6 h-10">For those who already have equipment and just want community access.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold font-heading">$0</span>
+                        <span class="text-gray-500">/ forever</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-sm">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-300 dark:text-gray-600"></i> Read-only forum access</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-300 dark:text-gray-600"></i> Local Scoby Exchange listings</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-gray-300 dark:text-gray-600"></i> Weekly newsletter</li>
+                        <li class="flex items-center gap-3 opacity-50"><i class="fas fa-times text-red-300"></i> No supply discounts</li>
+                    </ul>
+                    <a href="auth.html" class="block w-full py-3 text-center rounded-xl border-2 border-gray-200 dark:border-gray-700 font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Join Free</a>
+                </div>
+
+                <!-- Plan 2 (Featured) -->
+                <div class="bg-matcha text-white p-8 rounded-3xl shadow-2xl relative transform md:-translate-y-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg whitespace-nowrap">Most Popular</div>
+                    
+                    <h3 class="text-xl font-heading font-bold mb-2">Substrate Box</h3>
+                    <p class="text-sm text-matcha-100 mb-6 h-10">Monthly delivery of organic tea, sugar, and exclusive flavors.</p>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold font-heading">$24</span>
+                        <span class="text-matcha-200">/ month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400"></i> Custom tea & sugar blend (yields 4 gal)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400"></i> 1 Seasonal F2 flavor packet</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400"></i> Unlimited forum posting</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400"></i> 15% off all hardware</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400"></i> Free shipping</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 text-center rounded-xl bg-white text-matcha font-bold hover:shadow-lg hover:scale-105 transition-transform">Subscribe Now</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-white dark:bg-[#2a2a2a] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all fade-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-xl font-heading font-bold mb-2">Pro Lab</h3>
+                    <p class="text-sm text-gray-500 mb-6 h-10">For small commercial brewers or serious continuous setup managers.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold font-heading">$65</span>
+                        <span class="text-gray-500">/ month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-sm">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Bulk substrate (yields 15 gal)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Priority expert culture diagnostics</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Verified Seller badge on Exchange</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Wholesale pricing on bottles</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 text-center rounded-xl bg-charcoal text-white dark:bg-white dark:text-charcoal font-bold hover:opacity-90 transition-opacity">Go Pro</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Subscription Comparison Table -->
+        <section class="py-24 w-full px-6 md:px-16 lg:px-24 fade-up">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Compare Features</h2>
+            
+            <div class="max-w-5xl mx-auto bg-white dark:bg-[#2a2a2a] rounded-[2rem] shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="bg-gray-50 dark:bg-[#222]">
+                            <th class="p-6 font-bold w-1/3">Features</th>
+                            <th class="p-6 font-bold text-center">Exchange (Free)</th>
+                            <th class="p-6 font-bold text-center text-matcha">Substrate Box</th>
+                            <th class="p-6 font-bold text-center">Pro Lab</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-t border-gray-100 dark:border-gray-800">
+                            <td class="p-6 font-medium">Scoby Exchange Access</td>
+                            <td class="p-6 text-center text-gray-400"><i class="fas fa-check"></i></td>
+                            <td class="p-6 text-center text-matcha"><i class="fas fa-check"></i></td>
+                            <td class="p-6 text-center text-blue-500"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr class="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-[#222]/50">
+                            <td class="p-6 font-medium">Forum Access</td>
+                            <td class="p-6 text-center text-gray-500">Read-only</td>
+                            <td class="p-6 text-center font-bold">Unlimited</td>
+                            <td class="p-6 text-center font-bold">Unlimited</td>
+                        </tr>
+                        <tr class="border-t border-gray-100 dark:border-gray-800">
+                            <td class="p-6 font-medium">Monthly Organic Tea</td>
+                            <td class="p-6 text-center text-gray-300 dark:text-gray-700"><i class="fas fa-minus"></i></td>
+                            <td class="p-6 text-center font-bold">4 Gallon Yield</td>
+                            <td class="p-6 text-center font-bold">15 Gallon Yield</td>
+                        </tr>
+                        <tr class="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-[#222]/50">
+                            <td class="p-6 font-medium">Hardware Discount</td>
+                            <td class="p-6 text-center text-gray-300 dark:text-gray-700"><i class="fas fa-minus"></i></td>
+                            <td class="p-6 text-center font-bold text-matcha">15% Off</td>
+                            <td class="p-6 text-center font-bold text-blue-500">Wholesale</td>
+                        </tr>
+                        <tr class="border-t border-gray-100 dark:border-gray-800">
+                            <td class="p-6 font-medium">Culture Diagnostics</td>
+                            <td class="p-6 text-center text-gray-300 dark:text-gray-700"><i class="fas fa-minus"></i></td>
+                            <td class="p-6 text-center text-gray-500">Standard (48h)</td>
+                            <td class="p-6 text-center font-bold">Priority (12h)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 4: FAQs + CTA -->
+        <section class="py-16 w-full px-6 md:px-16 lg:px-24 grid lg:grid-cols-2 gap-16 items-center fade-up">
+            
+            <!-- FAQs -->
+            <div>
+                <h2 class="text-3xl font-heading font-bold mb-8">Subscription FAQs</h2>
+                <div class="space-y-4">
+                    <div class="bg-white dark:bg-[#2a2a2a] rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-4 text-left font-bold text-lg flex justify-between items-center focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            Can I skip a month?
+                            <i class="fas fa-chevron-down text-matcha transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-gray-600 dark:text-gray-400 text-sm border-t border-gray-100 dark:border-gray-800 pt-4">
+                            Absolutely. You can pause, skip, or modify your delivery schedule directly from your account dashboard. We know brewing schedules can fluctuate!
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[#2a2a2a] rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-4 text-left font-bold text-lg flex justify-between items-center focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            Can I choose my tea blends?
+                            <i class="fas fa-chevron-down text-matcha transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-gray-600 dark:text-gray-400 text-sm border-t border-gray-100 dark:border-gray-800 pt-4">
+                            Yes. Before your box ships, you'll receive an email allowing you to customize your tea selection (Classic Black, Sencha Green, Hibiscus, or our monthly surprise blend).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-organic-gradient rounded-[2.5rem] p-10 text-center shadow-xl border border-matcha/20">
+                <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-2xl text-matcha mx-auto mb-6 shadow-sm">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Need hardware first?</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-8">If you're just starting out, grab one of our Starter Kits. They all come with a free month of the Substrate Box included.</p>
+                <a href="services.html" class="inline-block px-8 py-3 rounded-full bg-charcoal text-white font-bold hover:scale-105 transition-transform">Shop Starter Kits</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="w-full px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-matcha hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Starter Kits</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Bottles & Jars</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Tea & Sugar Bundles</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Heating Mats</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="pricing.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Brewing Forum</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Recipe Blog</a></li>
+                        <li><a href="about.html" class="hover:text-matcha transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-matcha transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">Refunds & Returns</a></li>
+                        <li><a href="#" class="hover:text-matcha transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Kombucha Homebrew Supply. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple FAQ toggle
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>

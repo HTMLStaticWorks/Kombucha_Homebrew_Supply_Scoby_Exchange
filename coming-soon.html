@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Kombucha Homebrew Supply</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bg-animated-gradient {
+            background: linear-gradient(-45deg, #A7C957, #D48C45, #333333, #6B4E31);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glass Panel */
+        .coming-soon-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen bg-animated-gradient text-white flex flex-col items-center justify-center relative overflow-hidden">
+
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="w-full px-6 md:px-16 lg:px-24 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <div class="nav-item">
+                    <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home 1</a>
+                        <a href="home-niche.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="hover:text-matcha transition-colors text-white/80">About</a>
+                <a href="services.html" class="hover:text-matcha transition-colors text-white/80">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha transition-colors text-white/80">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha transition-colors text-white/80">Blog</a>
+                <a href="contact.html" class="hover:text-matcha transition-colors text-white/80">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="rtl-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="cart-btn" class="relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="View Cart">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-charcoal">
+                <div class="space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
+                    <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
+                    <a href="home-niche.html" class="block hover:text-matcha font-medium transition-colors">Home 2</a>
+                </div>
+                <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
+                <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
+                <a href="pricing.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
+                <a href="blog.html" class="hover:text-matcha font-medium transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-matcha font-medium transition-colors">Contact</a>
+                <a href="auth.html" class="inline-block text-center px-6 py-2 rounded-full bg-matcha text-white font-medium">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- RTL Toggle -->
+    <button class="rtl-toggle absolute top-6 right-6 z-50 p-3 rounded-full bg-black/20 backdrop-blur shadow-sm hover:scale-110 transition-transform font-bold text-xs text-white/80">RTL</button>
+
+    <main class="w-full px-6 md:px-16 lg:px-24 relative z-10">
+        <div class="max-w-4xl mx-auto coming-soon-glass rounded-[3rem] p-8 md:p-16 text-center fade-up">
+            
+            <!-- Section 1: Launch Hero -->
+            <div class="mb-12">
+                <div class="w-20 h-20 mx-auto rounded-full bg-white/20 flex items-center justify-center text-white font-heading font-bold text-3xl mb-6 shadow-inner border border-white/30">K</div>
+                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">Something is brewing.</h1>
+                <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-light">
+                    We are putting the final touches on our new automated fermentation monitoring system. The lab opens soon.
+                </p>
+            </div>
+
+            <!-- Section 2: Countdown Timer -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto mb-16">
+                <div class="bg-black/30 rounded-2xl p-4 md:p-6 border border-white/10 shadow-inner">
+                    <div id="days" class="text-4xl md:text-5xl font-heading font-bold font-mono">14</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest mt-2 text-white/60">Days</div>
+                </div>
+                <div class="bg-black/30 rounded-2xl p-4 md:p-6 border border-white/10 shadow-inner">
+                    <div id="hours" class="text-4xl md:text-5xl font-heading font-bold font-mono">08</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest mt-2 text-white/60">Hours</div>
+                </div>
+                <div class="bg-black/30 rounded-2xl p-4 md:p-6 border border-white/10 shadow-inner">
+                    <div id="minutes" class="text-4xl md:text-5xl font-heading font-bold font-mono">45</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest mt-2 text-white/60">Minutes</div>
+                </div>
+                <div class="bg-black/30 rounded-2xl p-4 md:p-6 border border-white/10 shadow-inner">
+                    <div id="seconds" class="text-4xl md:text-5xl font-heading font-bold font-mono">22</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest mt-2 text-white/60">Seconds</div>
+                </div>
+            </div>
+
+            <!-- Section 3: Email Subscription Form -->
+            <div class="max-w-xl mx-auto mb-16">
+                <p class="font-bold mb-4">Get early access and 20% off your first order.</p>
+                <form class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/30 focus:outline-none focus:border-white focus:bg-white/20 text-white placeholder-white/50 transition-all shadow-inner" required>
+                    <button type="submit" class="px-8 py-4 rounded-full bg-white text-charcoal font-bold hover:scale-105 transition-transform shadow-xl">Notify Me</button>
+                </form>
+            </div>
+
+            <!-- Section 4: Social Media Links -->
+            <div>
+                <p class="text-sm text-white/60 uppercase tracking-widest mb-4 font-bold">Follow our progress</p>
+                <div class="flex justify-center gap-6">
+                    <a href="#" class="text-2xl text-white/80 hover:text-white hover:scale-125 transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl text-white/80 hover:text-white hover:scale-125 transition-all"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl text-white/80 hover:text-white hover:scale-125 transition-all"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-2xl text-white/80 hover:text-white hover:scale-125 transition-all"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple visual countdown logic (not tied to a real date, just for demo)
+        let count = (14 * 24 * 60 * 60) + (8 * 60 * 60) + (45 * 60) + 22;
+
+        setInterval(() => {
+            count--;
+            if (count < 0) return;
+
+            const days = Math.floor(count / (24 * 60 * 60));
+            const hours = Math.floor((count % (24 * 60 * 60)) / (60 * 60));
+            const minutes = Math.floor((count % (60 * 60)) / 60);
+            const seconds = Math.floor(count % 60);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[999] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="cart-drawer" class="fixed top-0 right-[-100%] w-full max-w-[400px] h-full bg-white dark:bg-charcoal z-[1000] shadow-2xl transition-all duration-400 ease-in-out flex flex-col">
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+            <h2 class="text-2xl font-heading font-bold">Your Basket</h2>
+            <button id="close-cart" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center space-y-4">
+                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-3xl text-gray-400">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Your basket is empty</p>
+                    <p class="text-gray-500 text-sm">Start adding some organic goodness!</p>
+                </div>
+                <button id="start-shopping" class="px-8 py-3 bg-matcha text-white rounded-full font-bold hover:scale-105 transition-transform">Start Shopping</button>
+            </div>
+        </div>
+        <div class="p-6 border-t border-gray-100 dark:border-gray-800 space-y-4 bg-gray-50 dark:bg-black/20">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="text-xs text-gray-500">Shipping and taxes calculated at checkout.</p>
+            <button class="w-full py-4 bg-matcha text-white rounded-2xl font-bold text-lg hover:bg-matcha/90 transition-colors shadow-lg shadow-matcha/20">Checkout Now</button>
+        </div>
+    </div>
+</body>
+</html>
