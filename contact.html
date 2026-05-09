@@ -30,6 +30,7 @@
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
 
@@ -38,12 +39,12 @@
         <div class="w-full px-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold text-xl group-hover:rotate-12 transition-transform">K</div>
+                <img src="assets/images/logo.png" alt="Logo" class="w-10 h-10 rounded-full object-cover group-hover:rotate-12 transition-transform shadow-sm">
                 <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 font-medium">
+            <nav class="hidden lg:flex items-center gap-8 font-medium">
                 <div class="nav-item">
                     <a href="index.html" class="hover:text-matcha transition-colors flex items-center">Home <i class="fas fa-chevron-down text-[10px] ml-1"></i></a>
                     <div class="dropdown-menu">
@@ -70,13 +71,13 @@
                     <i class="fas fa-shopping-basket"></i>
                     <span id="cart-count" class="absolute -top-1 -right-1 bg-matcha text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
                 </button>
-                <a href="auth.html" class="hidden md:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+                <a href="auth.html" class="hidden lg:block px-6 py-2 rounded-full border-2 border-matcha text-matcha hover:bg-matcha hover:text-white transition-all font-medium">Sign In</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
             </div>
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 md:hidden">
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 lg:hidden">
             <div class="flex flex-col px-6 py-4 space-y-4">
                 <div class="space-y-2">
                     <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Home Pages</p>
@@ -245,7 +246,7 @@
                 <!-- Brand -->
                 <div>
                     <a href="index.html" class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 rounded-full bg-matcha flex items-center justify-center text-white font-heading font-bold">K</div>
+                        <img src="assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover">
                         <span class="font-heading font-semibold text-xl tracking-tight">Kombu<span class="text-matcha">cha</span></span>
                     </a>
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed">Empowering homebrewers with premium organic supplies, education, and community.</p>
