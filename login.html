@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Kombucha Homebrew Supply</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matcha: '#A7C957',
+                        amber: '#D48C45',
+                        cream: '#F7F4EB',
+                        charcoal: '#333333',
+                        earth: '#6B4E31',
+                        offwhite: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite font-sans min-h-screen flex flex-col">
+
+    <!-- Header Actions -->
+    <div class="fixed top-6 right-6 z-50 flex items-center gap-4">
+        <button class="rtl-toggle p-3 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-md shadow-lg hover:bg-matcha hover:text-white transition-all font-bold text-xs" aria-label="Toggle RTL">RTL</button>
+        <button class="theme-toggle p-3 rounded-full bg-white/80 dark:bg-charcoal/80 backdrop-blur-md shadow-lg hover:bg-matcha hover:text-white transition-all" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+        </button>
+    </div>
+
+    <main class="w-full flex min-h-screen items-center justify-center bg-organic-gradient dark:bg-none dark:bg-[#222]">
+        
+        <!-- Forms Area -->
+        <section class="w-full max-w-2xl flex items-center justify-center p-6 sm:p-12 md:p-24">
+            
+            <div class="w-full max-w-md glass p-8 sm:p-10 rounded-[2rem] shadow-2xl relative fade-up" style="transition-delay: 0.1s;">
+                
+                <!-- Logo inside the box -->
+                <div class="flex flex-col items-center mb-8">
+                    <a href="index.html" class="flex flex-col items-center gap-3 group">
+                        <div class="w-16 h-16 rounded-full bg-matcha/20 text-matcha flex items-center justify-center text-3xl shadow-lg shadow-matcha/20 group-hover:rotate-12 transition-transform">✨</div>
+                        <span class="font-heading font-semibold text-2xl tracking-tight text-charcoal dark:text-white">Kombu<span class="text-matcha">cha</span></span>
+                    </a>
+                </div>
+
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-heading font-bold mb-2">Welcome Back.</h2>
+                    <p class="text-gray-500 text-sm">New here? <a href="signup.html" class="text-matcha font-bold hover:underline">Create an account</a></p>
+                </div>
+
+                <!-- Login Form -->
+                <form id="form-login" class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Email Address</label>
+                        <input type="email" class="w-full h-14 px-4 rounded-xl bg-white/50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="brewer@example.com" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-gray-700 dark:text-gray-300">Password</label>
+                        <div class="relative">
+                            <input type="password" id="login-password" class="w-full h-14 px-4 rounded-xl bg-white/50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-matcha focus:ring-1 focus:ring-matcha transition-colors" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-matcha text-lg">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center px-1">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-matcha focus:ring-matcha">
+                                <span class="text-xs font-medium text-gray-500 group-hover:text-charcoal dark:group-hover:text-white transition-colors">Remember me</span>
+                            </label>
+                            <a href="#" class="text-xs font-bold text-matcha hover:underline">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <button type="submit" class="w-full h-14 rounded-xl bg-charcoal text-white dark:bg-white dark:text-charcoal font-bold hover:bg-matcha dark:hover:bg-matcha dark:hover:text-white transition-colors shadow-lg">Sign In</button>
+                        <a href="signup.html" class="block w-full h-14 rounded-xl border-2 border-gray-200 dark:border-gray-700 flex items-center justify-center font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Sign Up</a>
+                    </div>
+                </form>
+
+                <!-- Social Authentication Options -->
+                <div class="mt-8">
+                    <div class="relative flex items-center justify-center mb-6">
+                        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-300 dark:border-gray-700"></div></div>
+                        <span class="relative bg-[#FAF9F6] dark:bg-[#333] px-4 text-xs text-gray-500 uppercase font-bold tracking-wider rounded-full">Or continue with</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="flex items-center justify-center gap-2 py-3 rounded-xl bg-white dark:bg-[#222] border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-bold text-sm">
+                            <i class="fab fa-google text-red-500"></i> Google
+                        </button>
+                        <button class="flex items-center justify-center gap-2 py-3 rounded-xl bg-white dark:bg-[#222] border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-bold text-sm">
+                            <i class="fab fa-apple"></i> Apple
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Password visibility toggle logic
+        document.querySelectorAll('.password-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

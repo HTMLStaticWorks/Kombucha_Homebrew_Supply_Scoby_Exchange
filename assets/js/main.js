@@ -107,12 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Cart Drawer Logic
-  const cartBtn = document.getElementById('cart-btn');
+  const cartBtns = document.querySelectorAll('.cart-btn-trigger');
   const cartDrawer = document.getElementById('cart-drawer');
   const cartOverlay = document.getElementById('cart-overlay');
   const closeCart = document.getElementById('close-cart');
   const startShopping = document.getElementById('start-shopping');
-  const cartCount = document.getElementById('cart-count');
 
   const toggleCart = (show) => {
     if (show) {
@@ -132,8 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  if (cartBtn && cartDrawer && cartOverlay) {
-    cartBtn.addEventListener('click', () => toggleCart(true));
+  if (cartBtns.length > 0 && cartDrawer && cartOverlay) {
+    cartBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleCart(true);
+      });
+    });
     closeCart.addEventListener('click', () => toggleCart(false));
     cartOverlay.addEventListener('click', () => toggleCart(false));
     if (startShopping) startShopping.addEventListener('click', () => toggleCart(false));
@@ -147,11 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       itemsInCart++;
-      if (cartCount) {
-        cartCount.innerText = itemsInCart;
-        cartCount.classList.add('scale-125');
-        setTimeout(() => cartCount.classList.remove('scale-125'), 200);
-      }
+      const cartCounts = document.querySelectorAll('.cart-count');
+      cartCounts.forEach(count => {
+        count.innerText = itemsInCart;
+        count.classList.add('scale-125');
+        setTimeout(() => count.classList.remove('scale-125'), 200);
+      });
       
       // Optional: show a mini toast or open cart
       // toggleCart(true); 
@@ -161,13 +166,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sticky Header
   const header = document.getElementById('main-header');
   if (header) {
+    const hasInitialWhiteText = header.classList.contains('text-white');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         header.classList.add('shadow-md', 'glass', 'py-2');
         header.classList.remove('bg-transparent', 'py-4');
+        if (hasInitialWhiteText) header.classList.remove('text-white');
       } else {
         header.classList.remove('shadow-md', 'glass', 'py-2');
         header.classList.add('bg-transparent', 'py-4');
+        if (hasInitialWhiteText) header.classList.add('text-white');
       }
     });
   }
