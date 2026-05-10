@@ -35,7 +35,7 @@
 <body class="bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite transition-colors duration-300 font-sans">
 
     <!-- Header / Navigation -->
-    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-white">
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-charcoal dark:text-white">
         <div class="w-full px-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
@@ -83,10 +83,8 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite dark:bg-charcoal shadow-lg border-t border-gray-200 dark:border-gray-700 xl:hidden">
             <div class="flex flex-col items-center text-center px-6 py-8 space-y-6">
-                <div class="space-y-2">
                     <a href="index.html" class="block hover:text-matcha font-medium transition-colors">Home 1</a>
                     <a href="home-niche.html" class="block text-matcha font-medium">Home 2</a>
-                </div>
                 <a href="about.html" class="hover:text-matcha font-medium transition-colors">About</a>
                 <a href="services.html" class="hover:text-matcha font-medium transition-colors">Supplies</a>
                 <a href="exchange.html" class="hover:text-matcha font-medium transition-colors">Exchange</a>
@@ -102,25 +100,25 @@
 
     <main>
         <!-- Section 1: Specialized Kombucha Brewing Hero -->
-        <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-charcoal text-white">
-            <div class="absolute inset-0 bg-[url('assets/images/blog-featured.png')] bg-cover bg-center opacity-40"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent"></div>
+        <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-offwhite text-charcoal dark:bg-charcoal dark:text-white">
+            <div class="absolute inset-0 bg-[url('assets/images/blog-featured.png')] bg-cover bg-center opacity-20 dark:opacity-40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-offwhite via-offwhite/80 to-transparent dark:from-charcoal dark:via-charcoal/80"></div>
             
             <div class="w-full px-6 md:px-16 lg:px-24 relative z-10 flex flex-col items-center text-center">
                 <div class="fade-up max-w-4xl">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur mb-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-charcoal/10 dark:border-white/20 bg-charcoal/5 dark:bg-white/5 backdrop-blur mb-8">
                         <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                        <span class="text-sm font-mono tracking-widest text-gray-300">FERMENTATION LAB</span>
+                        <span class="text-sm font-mono tracking-widest text-gray-600 dark:text-gray-300">FERMENTATION LAB</span>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 tracking-tight">
                         Elevate the <span class="italic font-light text-amber-400">Science</span><br>of Fermentation.
                     </h1>
-                    <p class="text-xl text-gray-300 mb-10 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-10 font-light leading-relaxed max-w-2xl mx-auto">
                         For the serious brewer. Explore lab-grade equipment, rare single-origin teas, and scientific methodologies to perfect your craft.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#equipment" class="px-8 py-4 rounded-full bg-white text-charcoal font-semibold hover:bg-gray-200 transition-all">Explore Equipment</a>
-                        <a href="#timeline" class="px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition-all font-semibold backdrop-blur flex items-center justify-center gap-2">
+                        <a href="#equipment" class="px-8 py-4 rounded-full bg-charcoal text-white dark:bg-white dark:text-charcoal font-semibold hover:opacity-90 transition-all">Explore Equipment</a>
+                        <a href="#timeline" class="px-8 py-4 rounded-full border border-charcoal/30 dark:border-white/30 hover:bg-charcoal/5 dark:hover:bg-white/10 transition-all font-semibold backdrop-blur flex items-center justify-center gap-2">
                             <i class="fas fa-microscope"></i> View Protocols
                         </a>
                     </div>
@@ -245,53 +243,53 @@
         </section>
 
         <!-- Section 4: Brewing Process Timeline -->
-        <section id="timeline" class="py-24 bg-charcoal text-white relative">
+        <section id="timeline" class="py-24 bg-white dark:bg-charcoal text-charcoal dark:text-white relative">
             <div class="w-full px-6 md:px-16 lg:px-24">
                 <div class="text-center mb-16 fade-up">
                     <h2 class="text-4xl font-heading font-bold mb-4">The Fermentation Timeline.</h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Understanding the microbial phases of kombucha brewing.</p>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Understanding the microbial phases of kombucha brewing.</p>
                 </div>
 
                 <div class="relative max-w-4xl mx-auto">
                     <!-- Vertical Line -->
-                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/20 transform md:-translate-x-1/2"></div>
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-charcoal/10 dark:bg-white/20 transform md:-translate-x-1/2"></div>
 
                     <!-- Phase 1 -->
                     <div class="relative flex flex-col md:flex-row items-start md:items-center mb-12 fade-up">
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-matcha border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-matcha border-4 border-white dark:border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
                         <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
                             <span class="text-matcha font-mono text-sm tracking-wider uppercase">Days 1-3</span>
                             <h3 class="text-2xl font-bold mb-2">Yeast Activation</h3>
-                            <p class="text-gray-400 text-sm">Yeasts begin consuming sucrose, breaking it down into fructose and glucose, producing ethanol and CO2.</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Yeasts begin consuming sucrose, breaking it down into fructose and glucose, producing ethanol and CO2.</p>
                         </div>
                         <div class="hidden md:block md:w-1/2 pl-12">
-                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">pH drops from 4.5 to 3.8</div>
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-charcoal dark:text-gray-300">pH drops from 4.5 to 3.8</div>
                         </div>
                     </div>
 
                     <!-- Phase 2 -->
                     <div class="relative flex flex-col md:flex-row items-start md:items-center mb-12 fade-up">
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-400 border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-400 border-4 border-white dark:border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
                         <div class="hidden md:block md:w-1/2 pr-12 text-right">
-                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">Pellicle formation visible</div>
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-charcoal dark:text-gray-300">Pellicle formation visible</div>
                         </div>
                         <div class="pl-12 md:pl-12 md:w-1/2">
                             <span class="text-amber-400 font-mono text-sm tracking-wider uppercase">Days 4-7</span>
                             <h3 class="text-2xl font-bold mb-2">Bacterial Acidification</h3>
-                            <p class="text-gray-400 text-sm">Acetobacter converts ethanol into acetic acid. The distinct tart flavor profile develops and a new pellicle forms on the surface.</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Acetobacter converts ethanol into acetic acid. The distinct tart flavor profile develops and a new pellicle forms on the surface.</p>
                         </div>
                     </div>
 
                     <!-- Phase 3 -->
                     <div class="relative flex flex-col md:flex-row items-start md:items-center fade-up">
-                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-400 border-4 border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-400 border-4 border-white dark:border-charcoal transform -translate-x-1/2 mt-1 md:mt-0 z-10"></div>
                         <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
                             <span class="text-blue-400 font-mono text-sm tracking-wider uppercase">Days 8-14</span>
                             <h3 class="text-2xl font-bold mb-2">Second Fermentation (F2)</h3>
-                            <p class="text-gray-400 text-sm">Bottled with fruit or sugar. Anaerobic environment forces CO2 into the liquid, creating natural carbonation.</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Bottled with fruit or sugar. Anaerobic environment forces CO2 into the liquid, creating natural carbonation.</p>
                         </div>
                         <div class="hidden md:block md:w-1/2 pl-12">
-                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-gray-300">Target pH: 2.5 - 3.2</div>
+                            <div class="glass p-2 rounded-lg inline-block text-xs font-mono text-charcoal dark:text-gray-300">Target pH: 2.5 - 3.2</div>
                         </div>
                     </div>
                 </div>
@@ -448,10 +446,13 @@
 
                 <!-- Links 2 -->
                 <div>
-                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Community</h4>
+                    <h4 class="font-bold mb-6 uppercase text-sm tracking-wider">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-matcha transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-matcha transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-matcha transition-colors">Our Supplies</a></li>
                         <li><a href="exchange.html" class="hover:text-matcha transition-colors">Scoby Exchange</a></li>
-                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Pro Forum</a></li>
+                        <li><a href="blog.html" class="hover:text-matcha transition-colors">Brewing Blog</a></li>
                     </ul>
                 </div>
 
